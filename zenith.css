@@ -223,6 +223,12 @@ textarea, a {
     outline: none !important;
 }
 
+/* fix bottom border under pages open in sidebar */
+/* works in Chrome */
+#roam-right-sidebar-content > div:not(:last-child) {
+    border-bottom: none !important;
+}
+
 #roam-right-sidebar-content {
     visibility: visible;
     display: flex;
