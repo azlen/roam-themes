@@ -1334,11 +1334,11 @@ canvas[data-id="layer2-node"] {
 
 /* modified from https://codemirror.net/demo/theme.html#night */
 
-.CodeMirror { background: var(--page-color) !important; color: #f8f8f8 !important; }
+.CodeMirror { background: var(--bg-color) !important; color: #f8f8f8 !important; }
 div.CodeMirror-selected { background: #447 !important;  }
 .CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection { background: rgba(68, 68, 119, .99); }
 .CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection { background: rgba(68, 68, 119, .99); }
-.CodeMirror-gutters { background: var(--page-color); border-right: 1px solid #252525; }
+.CodeMirror-gutters { background: var(--bg-color); border-right: 1px solid #252525; }
 .CodeMirror-guttermarker { color: white !important; }
 .CodeMirror-guttermarker-subtle { color: #bbb !important; }
 .CodeMirror-linenumber { color: #f8f8f8; }
