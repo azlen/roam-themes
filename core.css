@@ -1,3 +1,7 @@
+:root {
+    --page-width: 616px;
+}
+
 html, body, .roam-app {
     background-color: var(--bg-color) !important;
     overflow: hidden !important;
@@ -112,13 +116,13 @@ textarea, a {
 
 .roam-article {
     padding: 0 !important;
-    width: 616px !important;
+    width: var(--page-width) !important;
 }
 .roam-article, #all-pages-search, #roam-right-sidebar-content > * {
     margin: 50px 0px 100px 0px !important;
     box-sizing: border-box;
     height: auto !important;
-    max-width: 616px;
+    max-width: var(--page-width);
 }
 
 *[style*="background-color: white"] {
@@ -186,13 +190,13 @@ textarea, a {
 #roam-right-sidebar-content > * {
     margin: 0px 0px 0 20px !important;
     overflow-x: hidden;
-    overflow-y: auto !important;
+    /*overflow-y: auto !important;*/
     max-height: 100vh;
     padding: 50px 0px 100px 0px;
     
     /* pesky bottom border/outline in chrome won't go away! */
     /* this does not fix it */
-    border: none !important
+    border: none !important;
     outline: none !important;
 }
 
@@ -213,7 +217,7 @@ textarea, a {
 
 #roam-right-sidebar-content > * {
     display: block !important;
-    max-width: 616px;
+    max-width: var(--page-width);
     position: relative !important;
 }
 
@@ -234,7 +238,7 @@ textarea, a {
 #roam-right-sidebar-content > * > div:last-child:not(:first-child) {
     border-radius: 0px 0px 10px 10px;
     padding-bottom: 50px !important;
-    width:616px;
+    width: var(--page-width);
 }
 #roam-right-sidebar-content > div > div:not(.flex-h-box) {
     padding: 0px 50px 0px 40px;
@@ -244,9 +248,6 @@ textarea, a {
     width: 20px !important;
     text-align: center;
     
-}
-#roam-right-sidebar-content > div > .flex-h-box > .bp3-button:first-child, #roam-right-sidebar-content .flex-h-box > .bp3-button:last-child {
-    display: block;
 }
 
 #roam-right-sidebar-content > div .bp3-icon-plus ~ .bp3-button, #roam-right-sidebar-content > div .bp3-icon-plus ~ .bp3-popover-wrapper {
@@ -270,6 +271,7 @@ textarea, a {
     position: absolute;
     top: 20px;
     left: 80px;
+    color: var(--icon-color);
 }
 /* position close button */
 #roam-right-sidebar-content > div .bp3-icon-minus ~ .bp3-button.bp3-icon-cross {
@@ -533,14 +535,15 @@ textarea, a {
 }
 .bp3-popover .bp3-menu, .bp3-popover .bp3-popover-content {
     pointer-events: auto;
+    background-color: var(--page-color) !important;
+}
+
+.bp3-popover .bp3-button {
+    background-color: var(--bg-color)
 }
 
 .bp3-popover .bp3-popover-arrow svg * {
     fill: var(--page-color);
-}
-
-.bp3-popover .bp3-popover-content {
-    background-color: var(--page-color) !important;
 }
 
 #app .bp3-popover .bp3-popover-arrow svg * {
@@ -603,12 +606,12 @@ body > .bp3-portal .bp3-text-small {
     cursor: pointer;
 }
 
-#find-or-create-input:active, #find-or-create-input:focus {
+/*#find-or-create-input:active, */#find-or-create-input:focus {
     opacity: 1;
     position: fixed;
-    width: 616px;
+    width: 600px;
     top: 100px;
-    left: calc(50% - 308px);
+    left: calc(50% - 600px / 2);
     cursor: text;
 }
 
@@ -644,8 +647,8 @@ body > .bp3-portal .bp3-text-small {
 /* properly position search menu overlay */
 .rm-find-or-create-wrapper .bp3-overlay {
     top: 142px;
-    width: 616px;
-    left: calc(50% - 308px);
+    width: 600px;
+    left: calc(50% - 300px);
     z-index: 999999;
 }
 
@@ -674,6 +677,11 @@ body > .bp3-portal .bp3-text-small {
     background-color: var(--page-color) !important;
     color: var(--text-color) !important;
     opacity: 0.3;
+}
+
+.rm-search-list-item {
+    color: var(--text-color) !important;
+    opacity: 0.6;
 }
 
 /* -------------------------- */
@@ -847,8 +855,8 @@ body > .bp3-portal .bp3-text-small {
     flex: 0 0 140px !important;
 }
 .rm-all-pages .table > div {
-    max-width: 616px !important;
-    min-width: 616px !important;
+    max-width: var(--page-width) !important;
+    min-width: var(--page-width) !important;
 }
 
 .sort-button::before {
@@ -898,7 +906,7 @@ body > .bp3-portal .bp3-text-small {
 
 /* */
 .roam-center > div[style*="width: 100%; height: 100%;"] {
-    width: 616px !important;
+    width: var(--page-width) !important;
 }
 .roam-center > div[style*="width: 100%; height: 100%;"] > div {
     position: fixed !important;
