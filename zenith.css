@@ -272,9 +272,6 @@ textarea, a {
     text-align: center;
     
 }
-#roam-right-sidebar-content > div > .flex-h-box > .bp3-button:first-child, #roam-right-sidebar-content .flex-h-box > .bp3-button:last-child {
-    display: block;
-}
 
 #roam-right-sidebar-content > div .bp3-icon-plus ~ .bp3-button, #roam-right-sidebar-content > div .bp3-icon-plus ~ .bp3-popover-wrapper {
     display: none;
