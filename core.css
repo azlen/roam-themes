@@ -1,30 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@600&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-
-
-:root {
-    --header-font: "Oxanium", "Inter", sans-serif;
-    --body-font: "Ubuntu", "Inter", sans-serif;
-    
-    --bg-color: #000000;
-    --page-color: rgba(44, 44, 44, 0.95);
-    
-    --text-color: #FFFFFF;
-    --icon-color: rgb(102, 102, 102); /* #5c7080 */
-    --bullet-color: rgba(255, 255, 255, 0.3);
-    
-    --page-shadow: 0px 8px 14px rgba(0, 0, 0, 0.25);
-    
-    --color-primary: 47, 155, 249;
-    --color-primary-contrast: #FFFFFF;
-    --color-secondary: 228, 78, 244;
-    /*--color-secondary: 255, 165, 0;*/
-    --color-secondary-contrast: #FFFFFF;
-}
-
 html, body, .roam-app {
     background-color: var(--bg-color) !important;
     overflow: hidden !important;
@@ -110,6 +83,10 @@ textarea, a {
     border-radius: 4px;
 }
 
+.block-highlight-blue {
+    background-color: rgba(var(--color-primary), 0.2)
+}
+
 .starred-pages a {
     color: rgb(var(--color-primary)) !important;
 }
@@ -140,9 +117,6 @@ textarea, a {
 .roam-article, #all-pages-search, #roam-right-sidebar-content > * {
     margin: 50px 0px 100px 0px !important;
     box-sizing: border-box;
-    /*position: -webkit-sticky !important;
-    position: sticky !important;
-    left: 0;*/
     height: auto !important;
     max-width: 616px;
 }
@@ -176,10 +150,6 @@ textarea, a {
     top: 0 !important;
     height: 100% !important;
     width: auto !important;
-    /*padding-left:410px;*/
-    /*white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;*/
     position: relative !important;
     padding-left: 50px;
 }
@@ -216,7 +186,7 @@ textarea, a {
 #roam-right-sidebar-content > * {
     margin: 0px 0px 0 20px !important;
     overflow-x: hidden;
-    overflow-y: auto!important;
+    overflow-y: auto !important;
     max-height: 100vh;
     padding: 50px 0px 100px 0px;
     
@@ -548,7 +518,8 @@ textarea, a {
     border-color: rgba(255, 255, 255, 0.25) !important;
 }
 .bp3-text-small {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: var(--text-color) !important;
+    opacity: 0.6;
 }
 
 
@@ -561,16 +532,15 @@ textarea, a {
     pointer-events: none; /* prevent from getting in the way of hover*/
 }
 .bp3-popover .bp3-menu, .bp3-popover .bp3-popover-content {
-    background-color: var(--page-color) !important;
     pointer-events: auto;
-}
-
-.bp3-popover .bp3-button {
-    background-color: var(--bg-color)
 }
 
 .bp3-popover .bp3-popover-arrow svg * {
     fill: var(--page-color);
+}
+
+.bp3-popover .bp3-popover-content {
+    background-color: var(--page-color) !important;
 }
 
 #app .bp3-popover .bp3-popover-arrow svg * {
@@ -710,6 +680,8 @@ body > .bp3-portal .bp3-text-small {
 /*          DIAGRAM           */
 /* -------------------------- */
 
+
+
 .rm-block-text svg {
     background-color: var(--bg-color) !important;
     border: none !important;
@@ -723,6 +695,7 @@ body > .bp3-portal .bp3-text-small {
 .roam-block div[style*="100vh"] > button {
     background-color: var(--bg-color) !important;
 }
+
 .bp3-button:hover, .roam-block div[style*="100vh"] > button:hover {
     background-color: rgba(var(--color-primary), 0.5) !important;
 }
@@ -939,7 +912,7 @@ body > .bp3-portal .bp3-text-small {
 /* you can't actually style the graph view because it uses canvas elements, but we *can* apply CSS filters to it to slightly change the appearance */
 canvas[data-id="layer2-node"] {
     /*filter: invert(1) drop-shadow(0px 3px 4px rgba(0,0,0,0.1));*/
-    filter: invert(1) contrast(1.1) hue-rotate(180deg) saturate(2);
+    filter: invert(1) hue-rotate(110deg) saturate(2.5);
     opacity: 0.3;
     transition: opacity .2s ease-out;
 }
@@ -1150,6 +1123,12 @@ canvas[data-id="layer2-node"] {
 }
 
 
+
+
+
+
+
+
 .roam-center > div > div > div svg {
     background-color: var(--bg-color) !important;
 }
@@ -1327,37 +1306,3 @@ canvas[data-id="layer2-node"] {
 .rm-find-or-create-wrapper .bp3-transition-container {
     transform: none !important;
 }
-
-
-
-
-/* code block styling */
-
-/* modified from https://codemirror.net/demo/theme.html#night */
-
-.CodeMirror { background: var(--bg-color) !important; color: #f8f8f8 !important; }
-div.CodeMirror-selected { background: #447 !important;  }
-.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection { background: rgba(68, 68, 119, .99); }
-.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection { background: rgba(68, 68, 119, .99); }
-.CodeMirror-gutters { background: var(--bg-color); border-right: 1px solid #252525; }
-.CodeMirror-guttermarker { color: white !important; }
-.CodeMirror-guttermarker-subtle { color: #bbb !important; }
-.CodeMirror-linenumber { color: #f8f8f8; }
-.CodeMirror-cursor { border-left: 1px solid white !important; }
-
-span.cm-qualifier { color: #666666 !important; }
-span.cm-comment { color: #C71FF9 !important; }
-span.cm-atom { color: #B58AFD !important; }
-span.cm-number, span.cm-attribute { color: #ffd500 !important; }
-span.cm-keyword { color: #599eff !important; }
-span.cm-string { color: #37f14a !important; }
-span.cm-meta { color: #369BFF !important; }
-span.cm-variable-2, span.cm-tag { color: #99b2ff !important; }
-span.cm-variable-3, span.cm-def, span.cm-type { color: white !important; }
-span.cm-bracket { color: #8da6ce !important; }
-span.cm-builtin, pan.cm-special { color: #ff9e59 !important; }
-span.cm-link { color: #845dc4 !important; }
-span.cm-error { color: #F41000 !important; }
-
-.CodeMirror-activeline-background { background: #1C005A !important; }
-.CodeMirror-matchingbracket { outline:1px solid grey !important; color:white !important; }
