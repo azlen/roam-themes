@@ -2,28 +2,28 @@
 @import url('https://azlen.github.io/roam-themes/core.css');
 
 /* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');	
 
-/* VARIABLES */
-:root {
+:root {	
     --page-width: 616px;
     
-    --header-font: "Crimson Text", serif;
-    --body-font: "Crimson Text", serif;
-    
-    --bg-color: #f5f1e2;
-    --page-color: rgba(236, 231, 209, .95);
-    
-    --text-color: #000000;
-    --icon-color: #5c7080; /* #5c7080 */
-    --bullet-color: rgba(0, 0, 0, 0.2);
-    
-    --page-shadow: 0px 8px 14px rgba(0, 0, 0, 0.02);
-    --color-primary: 181, 124, 38;
-    --color-primary-contrast: #FFFFFF;
-    --color-secondary: 100, 181, 38;
-    /*--color-secondary: 255, 165, 0;*/
-    --color-secondary-contrast: #FFFFFF;
+    --header-font: "Source Sans Pro", "Inter", sans-serif;	
+    --body-font: "Source Sans Pro", "Inter", sans-serif;	
+    	
+    --bg-color: #EEEEEE;	
+    --page-color: rgba(255, 255, 255, 0.95);	
+    	
+    --text-color: #000000;	
+    --icon-color: #5c7080; /* #5c7080 */	
+    --bullet-color: rgba(0, 0, 0, 0.2);	
+    	
+    --page-shadow: 0px 8px 14px rgba(0, 0, 0, 0.05);	
+    	
+    --color-primary: 73, 197, 91;	
+    --color-primary-contrast: #FFFFFF;	
+    --color-secondary: 147, 100, 235;	
+    /*--color-secondary: 255, 165, 0;*/	
+    --color-secondary-contrast: #FFFFFF;	
 }
 
 /* CHANGE COLOURS IN CANVAS */
