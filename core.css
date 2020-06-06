@@ -594,7 +594,12 @@ body > .bp3-portal .bp3-text-small {
 }
 
 
-
+/* -------------------------- */
+/*      EMBEDDING BLOCKS      */
+/* -------------------------- */
+.rm-embed-container{
+    background-color:var(--page-color);
+}
 
 /* -------------------------- */
 /*         SEARCH BAR         */
