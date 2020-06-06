@@ -690,7 +690,7 @@ body > .bp3-portal .bp3-text-small {
 
 
 
-.rm-block-text svg {
+.rm-block-text svg :not(.katex) {
     background-color: var(--bg-color) !important;
     border: none !important;
 }
@@ -1137,7 +1137,7 @@ canvas[data-id="layer2-node"] {
 
 
 
-.roam-center > div > div > div svg {
+.roam-center > div > div > div svg :not(.katex) {
     background-color: var(--bg-color) !important;
 }
 
