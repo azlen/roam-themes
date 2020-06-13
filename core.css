@@ -1,5 +1,6 @@
 :root {
     --page-width: 616px;
+    --page-order: row-reverse;
 }
 
 html, body, .roam-app {
@@ -114,6 +115,7 @@ textarea, a {
     background-color: rgb(var(--color-secondary));
 }
 
+/* set width and other attributes of pages */
 .roam-article {
     padding: 0 !important;
     width: var(--page-width) !important;
@@ -122,6 +124,10 @@ textarea, a {
     margin: 50px 0px 100px 0px !important;
     box-sizing: border-box;
     height: auto !important;
+    max-width: var(--page-width);
+}
+/* make blocks respect --page-width */
+.roam-block-container {
     max-width: var(--page-width);
 }
 
@@ -148,6 +154,11 @@ textarea, a {
 
 .roam-article > div:first-child, #roam-right-sidebar-content > * > * {
     box-shadow: var(--page-shadow);
+}
+
+/* set min-width for collapsed sidebar*/
+#roam-right-sidebar-content > * {
+    min-width: 58.5px;
 }
 
 .roam-body-main {
@@ -203,7 +214,7 @@ textarea, a {
 #roam-right-sidebar-content {
     visibility: visible;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: var(--page-order);
     align-items: flex-start; /* allow pages to have their own height */
     justify-content: flex-end;
 }
@@ -250,8 +261,18 @@ textarea, a {
     
 }
 
-#roam-right-sidebar-content > div .bp3-icon-plus ~ .bp3-button, #roam-right-sidebar-content > div .bp3-icon-plus ~ .bp3-popover-wrapper {
+/* when collapsed, hide all icons but `expand` and `close` */
+#roam-right-sidebar-content > div .bp3-icon-plus ~ .bp3-button:not(.bp3-icon-cross), #roam-right-sidebar-content > div .bp3-icon-plus ~ .bp3-popover-wrapper {
     display: none;
+}
+#roam-right-sidebar-content > div .bp3-icon-plus ~ .bp3-button.bp3-icon-cross {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin: 20px auto 0px auto !important;
+}
+#roam-right-sidebar-content > div .bp3-icon-plus ~ .bp3-button.bp3-icon-cross::before {
+    margin-top: 5px;
 }
 
 /* position minus button */
@@ -325,10 +346,6 @@ textarea, a {
     display: none;
 }
 
-/* I don't understand how to style this */
-/* In chrome there are injected stylesheets everywhere overriding everything */
-/* so confused */
-
 .roam-sidebar-content * {
     color: var(--icon-color) !important;
 }
@@ -384,14 +401,16 @@ textarea, a {
 .roam-sidebar-container {
     border: none !important;
     top: 0px !important;
-    padding-top: 70px;
+    padding: 70px 68px 50px 0px;
+
     visibility: hidden; /* hide background */
     transition: all .25s ease-out;
     width: 300px !important;
-    padding-right: 68px;
     backdrop-filter: blur(5px);
     background: #000000 !important;
-    
+
+    /* fix scrolling */
+    overflow-y: auto;
 }
 
 .roam-sidebar-container > .roam-sidebar-content {
@@ -412,6 +431,12 @@ textarea, a {
 .roam-sidebar-container[style*="top: 0px"] + .roam-main {
     padding-left: 250px;
 }
+
+/* separator between "ALL PAGES" and "SHORTCUTS" */
+.starred-pages-wrapper > div[style*="background"] {
+    background: var(--icon-color) !important;
+    opacity: 0.5;
+  }
 
 
 /* fix height with absolute positioning of email address */
@@ -953,16 +978,32 @@ canvas[data-id="layer2-node"] {
     background-color: rgb(var(--color-primary)) !important;
 }
 
-/*
-.roam-topbar .bp3-popover-wrapper .bp3-popover-content {
-    background-color: #FFFFFF !important;
-    color: #000000 !important;
+/* versioning tab underline */
+span[style*="border-bottom: 2px solid rgb(138, 155, 168)"] {
+    border-bottom: 3px solid rgb(var(--color-primary)) !important;
 }
-.roam-topbar > .bp3-popover-wrapper .bp3-popover-arrow svg * {
-    fill: #FFFFFF;
-}*/
 
+blockquote {
+    font-size: 14px;
+    border-color: var(--bullet-color);
+    opacity: 0.5;
+}
 
+code {
+    background: var(--bg-color);
+    border: none;
+    color: var(--text-color);
+    padding: 4px 7px;
+    line-height: 0.5;
+    border-radius: 0;
+}
+
+.block-border-left {
+    border-color: var(--bullet-color);
+  }
+  
+
+/* help button / popup */
 #buffer {
     background: transparent !important;
     right: 7px !important;

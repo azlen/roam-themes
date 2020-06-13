@@ -16,7 +16,7 @@
     --page-color: rgba(44, 44, 44, 0.95);
     
     --text-color: #FFFFFF;
-    --icon-color: rgb(102, 102, 102); /* #5c7080 */
+    --icon-color: rgb(102, 102, 102);
     --bullet-color: rgba(255, 255, 255, 0.3);
     
     --page-shadow: 0px 8px 14px rgba(0, 0, 0, 0.25);
@@ -24,7 +24,7 @@
     --color-primary: 47, 155, 249;
     --color-primary-contrast: #FFFFFF;
     --color-secondary: 228, 78, 244;
-    /*--color-secondary: 255, 165, 0;*/
+    
     --color-secondary-contrast: #FFFFFF;
 }
 
