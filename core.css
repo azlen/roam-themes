@@ -789,6 +789,18 @@ body > .bp3-portal .bp3-text-small {
     stroke: rgb(var(--color-secondary)) !important;
 }
 
+/* -------------------------- */
+/*       DATE PICKER          */
+/* -------------------------- */
+
+.bp3-datepicker{
+    background-color:var(--page-color);
+}
+
+.DayPicker-Day:hover{
+    background: rgb(var(--primary-color)) !important;
+}
+
 
 /* -------------------------- */
 /*       SEARCH PAGE          */
