@@ -798,7 +798,7 @@ body > .bp3-portal .bp3-text-small {
 }
 
 .DayPicker-Day:hover{
-    background: rgb(var(--primary-color)) !important;
+    background: rgb(var(--color-primary)) !important;
 }
 
 
