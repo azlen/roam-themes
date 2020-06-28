@@ -76,6 +76,11 @@ textarea, a {
     font-weight: bold;
 }
 
+.rm-alias-block, .rm-alias-block:hover {
+    color: rgb(var(--color-primary)) !important;
+    font-weight: bold;
+}
+
 .rm-page-ref, .rm-alias-page, .rm-alias-page:hover {
     color: rgb(var(--color-primary)) !important;
     font-weight: bold;
