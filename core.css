@@ -988,6 +988,11 @@ canvas[data-id="layer2-node"] {
 
 /* CHECKBOX */
 
+.check-container {
+    padding-right: 2px;
+    vertical-align: text-bottom;
+}
+
 .check-container .checkmark {
     width: 14px;
     height: 14px;
