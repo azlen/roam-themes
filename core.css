@@ -986,11 +986,27 @@ canvas[data-id="layer2-node"] {
     border-radius: 10px;
 }
 
+
+/* QUERY */
+
+.rm-query {
+  border: 0.5px solid #38332e;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-radius: 10px;
+}
+
+.rm-query .rm-query-title {
+  background-color: #38332e;
+  font-size: .8em;
+}
+
 /* CHECKBOX */
 
 .check-container {
     padding-right: 2px;
     vertical-align: text-bottom;
+    top: -5px;
 }
 
 .check-container .checkmark {
