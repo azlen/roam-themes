@@ -208,7 +208,7 @@ textarea, a {
 .sidebar-content > * {
     margin: 0px 0px 0 20px !important;
     overflow-x: visible;
-    /*overflow-y: auto !important;*/
+    overflow-y: auto !important;
     max-height: 100vh;
     padding: 50px 0px 100px 0px;
     
