@@ -239,6 +239,8 @@ textarea, a {
     position: relative !important;
     margin-bottom: 200px;
     flex-shrink: 0;
+
+    overflow-y: auto !important;
 }
 
 .sidebar-content > *:not(.rm-dnd-separator) > div:not(.rm-dnd-separator) > div:first-child:not(:last-child) {
