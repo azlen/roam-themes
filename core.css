@@ -1532,3 +1532,141 @@ code {
 .rm-find-or-create-wrapper .bp3-transition-container {
     transform: none !important;
 }
+
+
+
+
+
+
+/* CREDIT TO VIKTOR TABORI & ROBERT KIRK FOR FIXES */
+
+
+/* FIXING resizable interface */
+
+/* fix: collapsed sidebar windows by @_robertkirk */
+.window-headers:only-child {
+text-orientation: mixed;
+writing-mode: vertical-lr;
+}
+
+/* left sidebar fix */
+.roam-sidebar-container {
+padding-left: 45px;
+}
+
+@media only screen and (max-width: 600px) {
+.roam-sidebar-container {
+    padding-left: 0;
+}
+}
+
+
+/* fix resizing */
+.roam-body .roam-app .roam-main {
+overflow-x:hidden;
+flex-direction: row !important;
+max-width: var(--page-width) !important;
+}
+
+@media only screen and (max-width: 600px) {
+.roam-body .roam-app .roam-main {
+    flex: 0 0 auto!important;
+}
+
+.roam-body .roam-app .roam-body-main {
+    flex: 0 0 auto!important;
+}
+}
+
+/* main panel size fix */
+.roam-body .roam-app .roam-body-main {
+flex: 0 0 100%!important;
+padding-left: 55px;
+}
+
+.roam-body .roam-app .roam-body-main > [style*="padding-right"] {
+max-width: 100%!important;
+padding-left:unset!important;
+padding-right:unset!important;
+}
+
+.rm-block-text {
+max-width: 100%!important;
+}
+
+/* make the main panel scroll */
+.roam-app > .flex-h-box {
+overflow-x: scroll;
+}
+
+.roam-article {
+max-width: 100%;!important;
+overflow-x: hidden;
+}
+
+/* right sidebar fix */
+#right-sidebar {
+flex: 0 0 auto!important;
+}
+
+#right-sidebar .rm-resize-handle {
+left:-4px!important; /* in the original code this has set to -4 which is invalid */
+}
+
+#roam-right-sidebar-content {
+flex: 0 0 auto!important;
+overflow: scroll;
+}
+
+#roam-right-sidebar-content .sidebar-content > * {
+max-width: 100%;
+overflow-x: hidden;
+padding-top: 45px;
+}
+
+/* right sidebar header fixes */
+#roam-right-sidebar-content .window-headers {
+margin-left: 5px!important;
+flex-direction: row !important;
+align-items: center!important;
+position: relative!important;
+}
+
+#roam-right-sidebar-content .window-headers .bp3-icon-cross {
+order: 1!important;
+margin-right: 10px;
+}
+
+#roam-right-sidebar-content .window-headers > :nth-child(1) {
+order: 2;
+}
+
+#roam-right-sidebar-content .window-headers > :nth-child(2) {
+order: 3;
+}
+
+#roam-right-sidebar-content .window-headers button.bp3-small {
+color: var(--text-color);
+order: 4;
+}
+
+#roam-right-sidebar-content .window-headers > [style*="0px"] {
+order: 5;
+}
+
+#roam-right-sidebar-content .sidebar-content > * > * {
+padding-right: 10px!important;
+}
+
+/* sidebar title editing */
+.rm-sidebar-outline .rm-title-editing-display {
+    display: inline-block;
+}
+.rm-sidebar-outline .rm-title-editing-display textarea {
+    margin-left: 0!important;
+}
+
+/* visualize the right sidebar resize-handle */
+.rm-resize-handle:hover, .rm-resize-handle:focus {
+    background-color: #66666640;
+}
