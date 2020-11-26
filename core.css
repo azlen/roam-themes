@@ -1,6 +1,7 @@
 :root {
     --page-width: 616px;
     --page-order: row-reverse;
+    --main-page-width: 816px;
 }
 
 html, body, .roam-app {
@@ -685,7 +686,7 @@ textarea, a {
 }
 .bp3-text-small {
     color: var(--text-color) !important;
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
 
@@ -1566,6 +1567,12 @@ padding-left: 45px;
 overflow-x:hidden;
 flex-direction: row !important;
 max-width: var(--page-width) !important;
+}
+
+.roam-main {
+    overflow-x:hidden;
+    flex-direction: row !important;
+    max-width: var(--main-page-width) !important;
 }
 
 @media only screen and (max-width: 600px) {
