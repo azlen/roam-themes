@@ -1563,10 +1563,10 @@ padding-left: 45px;
 
 
 /* fix resizing */
-.roam-body .roam-app .roam-main {
-overflow-x:hidden;
-flex-direction: row !important;
-max-width: var(--page-width) !important;
+.roam-body .roam-app {
+    overflow-x:hidden;
+    flex-direction: row !important;
+    max-width: var(--page-width) !important;
 }
 
 .roam-main {
