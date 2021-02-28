@@ -56,3 +56,8 @@
 canvas[data-id="layer2-node"] {
     filter: invert(1) hue-rotate(170deg) saturate(2.5);
 }
+
+.rm-topbar {
+  background: #f5f1e2;
+}
+
