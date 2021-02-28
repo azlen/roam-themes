@@ -1670,3 +1670,65 @@ padding-right: 10px!important;
 .rm-resize-handle:hover, .rm-resize-handle:focus {
     background-color: #66666640;
 }
+
+
+/* FIXING new sizing issues */
+.roam-body .roam-app .roam-main {
+    margin: 0 !important;
+}
+
+.rm-find-or-create-wrapper {
+    flex: 0 1 30px !important;
+}
+
+#find-or-create-input {
+    padding: 0;
+}
+
+#find-or-create-input:focus {
+    padding: 20px;
+}
+
+.bp3-icon-calendar {
+    margin-left: 0 !important;
+}
+
+.rm-topbar {
+    border-radius: 0 0 8px 0;
+    justify-content: space-evenly;
+}
+
+.rm-files-dropzone {
+    z-index: 9999;
+}
+
+.rm-topbar__left-spacer,
+.rm-topbar__spacer-sm {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .roam-body .roam-app .roam-main {
+        max-width: 716px !important;
+    }
+
+    .rm-topbar {
+        width: 250px;
+        padding-left: 55px;
+    }
+
+    .rm-sidebar-window {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .roam-body .roam-app .roam-main {
+        max-width: 97vw !important;
+    }
+
+    .rm-topbar {
+        width: 200px;
+        padding-left: 20px;
+    }
+}

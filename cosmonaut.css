@@ -59,3 +59,7 @@ span.cm-link { color: #845dc4 !important; }
 span.cm-error { color: #F41000 !important; }
 .CodeMirror-activeline-background { background: #1C005A !important; }
 .CodeMirror-matchingbracket { outline:1px solid grey !important; color:white !important; }
+
+.rm-topbar {
+  background: black;
+}
